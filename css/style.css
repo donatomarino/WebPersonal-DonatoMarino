@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Metemos color de fondo al body*/
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+/*Estilamos el contenedor de forma que el footer se quede en la parte de abajo*/
+.contenedor{
+    display:grid;
+    min-height: 100dvh;
+    grid-template-rows: 
+        auto 1fr auto;
+    width: 1200px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+
+/*Metemos un margin a todas las section de forma que se centren y que tengan sombra*/
+section{
+    margin: 20px auto;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.8)
+    )
+}
+
+/*Estilamos menu principal*/
+.contenedor .principal-header .logo{
+    font-family: "DynaPuff", system-ui;
+    color: chartreuse;
+}
+
+/* Quitamos la decoración de los enlaces del menu*/
+a:link{
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Cambiamos el color del texto de los enlaces en white*/&
+.contenedor .principal-header .menu a{
+    color: white;
+}
+
+/*Estilamos header principal*/
+header .principal-header{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(20, 20, 20);
+}
+
+/* Estilamos header del main*/
+main .title-main{
+    text-align: center;
+    padding: 20px;
+    line-height: 35px;
+    background-color: rgb(20, 20, 20);
+}
+
+main .title-main h2{
+    margin-bottom: 15px;
+}
+
+/* Metemos el display flex a todas las secciones del main*/
+main .primera-section-main-page, .segunda-section-main-page, .tercera-section-main-page{
+    display:flex;
+    background-color: rgba(20, 20, 20);
+}
+
+/* Estilamos las secciones del main para que queden centradas*/
+main .primera-section-main-page .go-to-biografia, .go-to-portfolio, .go-to-contact-page{
+    padding: 120px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*Estilamos primera section del main */
+main .primera-section-main-page{
+    height: 700px;
+}
+
+/* Estilamos segunda sectión */
+main .segunda-section-main-page{
+    height: 600px;
+}
+
+/* Estilamos tercera section */
+main .tercera-section-main-page{
+    height: 550px;
+}
+
+/*Estilamos los botones*/
+a .button-main-page{
+    display: block;
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    background-color: rgb(96, 194, 4);
+    align-content: center;
+    margin:auto;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.button-main-page:hover{
+    background-color:rgb(120, 238, 10);
+    cursor: pointer;
+}
+
+.text-resalto{
+    color:chartreuse;
+}
+
+/*Estilamos el footer*/
+footer{
+    background-color: rgb(20, 20, 20);
+    padding: 15px;
+    font-size: 12px;
+}
+
+/*PAGE BIOGRAFIA*/
+/*Estilamos primera seccion*/
+main .historia-tattoo, .regreso-españa{
+    display:flex;
+    background-color: rgb(20, 20, 20);
+}
+
+main .historia-tattoo, .regreso-españa{
+    height: 700px;
+}
+
+/*Estilamos las secciones*/
+main .historia-tattoo .biografia1, .biografia2{
+    margin: auto;
+    padding: 50px;
+    line-height: 30px;
+    text-align: center;
+}
+
+main .galeria-imagenes{
+    background-color: rgb(20, 20, 20);
+}
+
+/*Estilamos titulo de la galeria*/
+main .galeria-imagenes div h2{
+    text-align: center;
+    padding: 20px;
+}
+
+/*Estilamos las imagenes con efecto galeria*/
+main .galeria-imagenes .imagenes-bio{
+    display:flex;
+    width: 1200px;
+    height: 600px;
+    margin-top:20px;
+}
+
+main .galeria-imagenes .imagenes-bio img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+main .galeria-imagenes .imagenes-bio img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* PAGE PORTFOLIO */
+main.main-portfolio{
+    background-color: rgb(20, 20, 20);
+    margin: 20px auto;
+}
+
+/*Estilamos titulo portoflio*/
+main header.header-portfolio{
+    text-align: center;
+}
+
+/*Estilamos las imagenes con efecto galeria*/
+.imagenes-y-video-portfolio{
+    display:flex;
+    width: 1200px;
+    height: 600px;
+    margin-top:20px;
+}
+
+.imagenes-y-video-portfolio img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.imagenes-y-video-portfolio img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* CONTACT-PAGE */
+section.main-contacto{
+    background-color: rgb(20, 20, 20);
+}
+
+/*Estilamos el form de forma que cada elemento ocupe solamente 1 linea*/
+.main-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-contacto .header-contact-page, #contacto-dudas{
+    padding:20px;
+}
+
+/*Estilamos los input del form*/
+input[type="text"], input[type="email"], input[type="number"], textarea{
+    width: 100%;
+    height: 3em;
+    border:none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+textarea{
+    height: 200px;
+    align-content: center;
+    text-align: left;
+}
+
+input:hover, textarea:hover{
+    background-color: rgb(250, 250, 250);
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    margin-top: 10px;
+}
+
+div > #checkbox{
+    margin-left: 5px;
+}
+
+/*Estilamos boton contact-page*/
+.button-contact-page{
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    background-color: rgb(96, 194, 4);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+
